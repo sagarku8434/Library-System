@@ -1,12 +1,22 @@
-Students can view available desks, select a study shift, reserve a seat, manage payments, renew memberships, and record attendance using a dynamic QR system.
+📚 Athena Library | Smart Seat Booking & Attendance System
+<p align="center">
+  <img src="public/logo.svg" alt="Athena Library Logo" width="100">
+</p>
 
-The admin portal provides tools for managing students, bookings, seats, attendance, pricing, payments, offline admissions, and revenue.
+<p align="center">
+  Smart Seat Booking • QR Attendance • Payments • Student & Admin Management
+</p>
 
----
+<p align="center">
 
-## 🔄 System Flow
+     
+</p>
 
-```text
+📖 About
+Athena Library is a full-stack smart library management system designed for study libraries and reading rooms.
+Students can view live seat availability, choose a study shift, reserve a desk, make payments, manage memberships, and mark attendance using a dynamic QR system.
+The admin portal helps manage students, bookings, seats, attendance, payments, pricing, offline admissions, and revenue.
+🔄 System Flow
 Register
    ↓
 Choose Seat & Shift
@@ -22,7 +32,7 @@ Admin Monitoring
 ✨ Main Features
 👨‍🎓 Student Portal
 - Live seat availability
-- Interactive seat booking
+- Interactive desk booking
 - Multiple study shifts
 - Dynamic QR attendance
 - Payment receipts
@@ -44,29 +54,29 @@ Admin Monitoring
   <img src="docs/screenshots/home.png" alt="Athena Homepage" width="90%">
 </p>
 
-The homepage gives students quick access to seat availability, plans, gallery, contact information, and the booking system.
-It serves as the main entry point for students and administrators.
-🪑 Seat Booking
+The homepage gives students quick access to seat availability, pricing plans, gallery, contact details, and the booking system.
+It serves as the main entry point for both students and administrators and provides direct navigation to the major modules of the platform.
+🪑 Interactive Seat Booking
 <p align="center">
   <img src="docs/screenshots/seat-selection.png" alt="Seat Booking" width="90%">
 </p>
 
-Students select a date, study shift, membership plan, and available desk.
-The visual seat map distinguishes available, selected, held, and occupied desks and helps avoid booking conflicts.
+Students can select a booking date, study shift, membership plan, and available desk.
+The visual seat map shows available, selected, held, and occupied desks, helping students choose a seat easily while reducing booking conflicts.
 👨‍🎓 Student Dashboard
 <p align="center">
   <img src="docs/screenshots/student-dashboard.png" alt="Student Dashboard" width="90%">
 </p>
 
-The dashboard displays the student's assigned desk, active plan, attendance status, bookings, payments, and membership validity.
-Students can also access renewal, profile, and QR attendance options.
-📱 QR Attendance
+The student dashboard displays the assigned desk, active study pass, shift timing, membership validity, attendance status, and recent payment information.
+Students can also access bookings, payments, receipts, profile settings, renewal options, and QR attendance from one place.
+📱 Dynamic QR Attendance
 <p align="center">
   <img src="docs/screenshots/qr-attendance.png" alt="QR Attendance" width="90%">
 </p>
 
-Students scan a rotating QR code at the library to record check-in and check-out.
-The system stores attendance timestamps, assigned desk, shift details, and current attendance status.
+Students can scan a rotating QR code at the library reception to record their check-in and check-out.
+The system stores attendance timestamps, assigned desk, shift details, and current attendance status for better monitoring.
 🛠️ Tech Stack
 Technology	Purpose
 React.js	Frontend
@@ -99,12 +109,15 @@ Library-System/
 └── README.md
 
 ⚙️ Run Locally
+Clone the repository:
 git clone https://github.com/sagarku8434/Library-System.git
 cd Library-System
+
+Install frontend dependencies:
 npm install
 npm run dev
 
-Backend:
+Run backend:
 cd backend
 npm install
 npm run dev
