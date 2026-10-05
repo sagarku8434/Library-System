@@ -48,7 +48,7 @@ Students can reserve their preferred desk and study timing online, while adminis
 ## 🏠 Athena Library Homepage
 
 <p align="center">
-  <img src="docs/screenshots/home.png" alt="Athena Library Homepage" width="95%">
+  <img src="docs/Screenshots/home.png" alt="Athena Library Homepage" width="95%">
 </p>
 
 The homepage provides a modern introduction to **Athena Smart Study Library** with quick access to the live seat map, pricing plans, gallery, contact information, student dashboard, and administrator portal.
@@ -60,7 +60,7 @@ Students can quickly check desk availability and proceed directly to the online 
 ## 🪑 Interactive Seat Selection
 
 <p align="center">
-  <img src="docs/screenshots/seat-selection.png" alt="Athena Interactive Seat Selection" width="95%">
+  <img src="docs/Screenshots/seat-selection.png" alt="Athena Interactive Seat Selection" width="95%">
 </p>
 
 Athena provides an interactive architectural seat-selection interface where students can select their preferred:
@@ -89,7 +89,7 @@ The booking engine is designed to prevent conflicting reservations across overla
 ## 👨‍🎓 Student Dashboard
 
 <p align="center">
-  <img src="docs/screenshots/student-dashboard.png" alt="Athena Student Dashboard" width="95%">
+  <img src="docs/Screenshots/student-dashboard.png" alt="Athena Student Dashboard" width="95%">
 </p>
 
 The student dashboard acts as a central control panel for the student's library membership.
@@ -115,7 +115,7 @@ Students can also directly open the QR attendance scanner or book another desk.
 ## 📱 Dynamic QR Attendance
 
 <p align="center">
-  <img src="docs/screenshots/qr-attendance.png" alt="Athena QR Attendance System" width="95%">
+  <img src="docs/Screenshots/qr-attendance.png" alt="Athena QR Attendance System" width="95%">
 </p>
 
 Athena includes a **dynamic QR-based attendance system** for student check-in and check-out.
