@@ -8,13 +8,17 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
+    "dev:backend": "node --watch backend/server.js",
+    "start:backend": "node backend/server.js",
+    "seed:backend": "node backend/src/utils/seedData.js",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "lucide-react": "^1.21.0",
     "react": "^19.2.7",
-    "react-dom": "^19.2.7"
+    "react-dom": "^19.2.7",
+    "react-router-dom": "^7.18.4"
   },
   "devDependencies": {
     "@types/react": "^19.2.17",
@@ -25,5 +29,4 @@
     "vite": "^8.1.0"
   },
   "homepage": "https://tarnished-byte.github.io/Library-System/"
-
 }
