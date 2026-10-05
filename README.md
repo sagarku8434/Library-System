@@ -1,101 +1,120 @@
-# Athena Library | Smart Seat Booking & Attendance System
+Students can view available desks, select a study shift, reserve a seat, manage payments, renew memberships, and record attendance using a dynamic QR system.
 
-Athena Library is a full-stack, enterprise-grade digital management platform engineered for commercial study libraries and reading rooms. It unifies online desk reservations, live conflict-safe seat allocation, Razorpay payment processing, dynamic QR attendance, student ID verification, and administrative operations.
-
----
-
-## Key Features
-
-### Student Portal
-- **Interactive Seat Map**: Live architectural layout of desks across reading halls with dynamic status indicators.
-- **Conflict-Safe Booking Engine**: Prevents double-booking across overlapping morning, afternoon, evening, and full-day shifts.
-- **Dynamic QR Attendance**: Self check-in and check-out via dynamic rotating 30-second tokens at library reception.
-- **Instant Receipts**: Verified Razorpay payment receipts with printable and downloadable slips.
-- **Seamless Renewals**: Retain the same assigned desk for subsequent months with 1-click renewal.
-- **DPDP Compliant**: Encrypted storage references for Aadhaar and College ID credentials.
-
-### Admin & Owner Command Portal
-- **Real-Time Operations Dashboard**: Live metrics for revenue, occupancy rates, today's attendance, and active bookings.
-- **Booking Approvals & Refunds**: Verify online student admissions; 1-click approvals and automated refund workflows.
-- **Offline Admissions**: Handle walk-in students, collect cash/counter UPI, and reserve desks on the same live engine.
-- **Desk & Capacity Management**: Add, relocate, or disable desks for maintenance across halls.
-- **Live Attendance Audits**: Monitor students inside the reading rooms with administrative timestamp overrides.
-- **Revenue Analytics**: Shift-wise breakdown, reconciliation reports, and CSV data export.
-- **Website CMS**: Update branding, contact numbers, address, and operating hours without touching source code.
+The admin portal provides tools for managing students, bookings, seats, attendance, pricing, payments, offline admissions, and revenue.
 
 ---
 
-## Project Structure
+## 🔄 System Flow
 
-```
+```text
+Register
+   ↓
+Choose Seat & Shift
+   ↓
+Make Payment
+   ↓
+Booking Confirmed
+   ↓
+QR Attendance
+   ↓
+Admin Monitoring
+
+✨ Main Features
+👨‍🎓 Student Portal
+- Live seat availability
+- Interactive seat booking
+- Multiple study shifts
+- Dynamic QR attendance
+- Payment receipts
+- Booking history
+- Membership renewal
+- Profile management
+🛡️ Admin Portal
+- Student management
+- Booking approvals
+- Offline admissions
+- Seat management
+- Attendance monitoring
+- Payment & revenue tracking
+- Pricing management
+- Library settings
+🖥️ Application Preview
+🏠 Homepage
+<p align="center">
+  <img src="docs/screenshots/home.png" alt="Athena Homepage" width="90%">
+</p>
+
+The homepage gives students quick access to seat availability, plans, gallery, contact information, and the booking system.
+It serves as the main entry point for students and administrators.
+🪑 Seat Booking
+<p align="center">
+  <img src="docs/screenshots/seat-selection.png" alt="Seat Booking" width="90%">
+</p>
+
+Students select a date, study shift, membership plan, and available desk.
+The visual seat map distinguishes available, selected, held, and occupied desks and helps avoid booking conflicts.
+👨‍🎓 Student Dashboard
+<p align="center">
+  <img src="docs/screenshots/student-dashboard.png" alt="Student Dashboard" width="90%">
+</p>
+
+The dashboard displays the student's assigned desk, active plan, attendance status, bookings, payments, and membership validity.
+Students can also access renewal, profile, and QR attendance options.
+📱 QR Attendance
+<p align="center">
+  <img src="docs/screenshots/qr-attendance.png" alt="QR Attendance" width="90%">
+</p>
+
+Students scan a rotating QR code at the library to record check-in and check-out.
+The system stores attendance timestamps, assigned desk, shift details, and current attendance status.
+🛠️ Tech Stack
+Technology	Purpose
+React.js	Frontend
+Vite	Development
+Node.js	Backend
+Express.js	REST API
+MongoDB	Database
+JWT	Authentication
+Razorpay	Payments
+
+
+📁 Project Structure
 Library-System/
 ├── src/
 │   ├── components/
-│   │   ├── common/         # Navbar, Footer, ProtectedRoute, Loader, Modal
-│   │   ├── booking/        # SeatMap, SeatCard, ShiftSelector, PricingCard, BookingSummary
-│   │   └── attendance/     # QRScanner, CheckInCard, AttendanceCalendar
 │   ├── pages/
-│   │   ├── public/         # Home, Seats, Pricing, Gallery, Contact, RulesPolicy
-│   │   ├── auth/           # Login, Register, ForgotPassword
-│   │   ├── student/        # StudentDashboard, MyBookings, Checkout, PaymentResult, MyPayments, MyAttendance, RenewBooking, MyProfile
-│   │   └── admin/          # AdminDashboard, Students, BookingRequests, AllBookings, SeatManagement, PricingManagement, Attendance, Payments, Revenue, OfflineAdmissions, WebsiteSettings, Settings
-│   ├── layouts/            # PublicLayout, StudentLayout, AdminLayout
-│   ├── services/           # api, authService, bookingService, paymentService, attendanceService
-│   ├── context/            # AuthContext, LibraryContext
-│   ├── data/               # athenaData (Initial rooms, 54 desks, shifts, plans, seed records)
-│   ├── App.jsx             # React Router structure
-│   └── index.css           # Architectural UI design system
-│
+│   ├── layouts/
+│   ├── context/
+│   └── services/
 ├── backend/
 │   ├── src/
-│   │   ├── config/         # db, paymentGateway, storage
-│   │   ├── models/         # User, StudentProfile, Room, Seat, PricingPlan, Booking, SeatAllocation, Payment, Attendance, LibrarySettings, Notification, AuditLog
-│   │   ├── routes/         # authRoutes, studentRoutes, seatRoutes, bookingRoutes, paymentRoutes, attendanceRoutes, adminRoutes
-│   │   ├── services/       # bookingEngine, availabilityService, qrService
-│   │   ├── middleware/     # authMiddleware, roleMiddleware
-│   │   └── utils/          # seedData script
-│   ├── server.js           # Express application entry
-│   ├── package.json
-│   └── .env.example
-│
+│   │   ├── models/
+│   │   ├── routes/
+│   │   ├── services/
+│   │   └── middleware/
+│   └── server.js
 ├── docs/
-│   ├── API.md              # REST API Reference
-│   ├── DATABASE.md         # Schemas & Conflict-Safe Algorithm
-│   ├── DEPLOYMENT.md       # Production Deployment Guide
-│   └── USER-MANUAL.md      # Operating Manual
-│
-└── package.json
-```
+│   └── screenshots/
+├── public/
+└── README.md
 
----
-
-## Quick Start
-
-### 1. Frontend Development Server
-
-```bash
-# In the root project directory:
+⚙️ Run Locally
+git clone https://github.com/sagarku8434/Library-System.git
+cd Library-System
 npm install
 npm run dev
-```
-The React frontend starts at `http://localhost:5173`.
 
-#### Instant Demo Switcher:
-Use the top role switcher in the navigation bar to toggle between:
-- **Student (Rahul)**: View student dashboard, book seats, test dynamic QR scanner, download receipts.
-- **Admin (Owner)**: View executive dashboard, approve booking requests, register walk-ins, edit prices.
-
----
-
-### 2. Backend Server
-
-```bash
+Backend:
 cd backend
 npm install
-cp .env.example .env
-# Optional: Seed initial database
-npm run seed
-# Start server
 npm run dev
-```
-The backend server runs on `http://localhost:5000/api`.
+
+Frontend:
+http://localhost:5173
+
+Backend:
+http://localhost:5000/api
+
+👨‍💻 Developed By
+Sagar Kumar
+GitHub: @sagarku8434
